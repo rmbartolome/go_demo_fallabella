@@ -23,10 +23,15 @@ Estructura del proyecto
   └── ...
 └── main.go
 ```
-Los datos de los contactos serán:
-* Nombre
-* Edad
-* Teléfono
-* Dirección
-* E-mail
-* Descripción
+http://localhost:4000/api/contacts/
+
+ejemplo json
+
+{
+   "nombre":"Roberto",
+   "edad":33,
+   "telefono":"+584129634141",
+   "direccion":"caracas",
+   "email":"rbartolome@acl.com",
+   "descripcion":"work"
+}
