@@ -1,7 +1,9 @@
 # Simple CRUD con GO
 Este proyecto consiste en una API REST para la gestion de contactos
 
-Instalación de GORM y Gorilla Mux
+Preparar base de datos con el script en la carpeta docker run.sh
+
+Instalación de GO, GORM y Gorilla Mux
 
 ```bash
 export PATH=$PATH:/usr/local/go/bin
