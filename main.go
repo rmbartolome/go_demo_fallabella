@@ -4,9 +4,9 @@ import (
 	"log"
 	"net/http"
 
+	"github.com/gorilla/mux"
 	"github.com/rbartolome/go_demo_fallabella/routes"
 	"github.com/rbartolome/go_demo_fallabella/utils"
-	"github.com/gorilla/mux"
 )
 
 func main() {
