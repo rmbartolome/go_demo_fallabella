@@ -5,9 +5,9 @@ import (
 	"fmt"
 	"net/http"
 
+	"github.com/gorilla/mux"
 	"github.com/rbartolome/go_demo_fallabella/models"
 	"github.com/rbartolome/go_demo_fallabella/utils"
-	"github.com/gorilla/mux"
 )
 
 // GetContact obtiene un contacto por su ID
@@ -119,9 +119,10 @@ func DeleteContact(w http.ResponseWriter, r *http.Request) {
 	// Se busca el contacto
 	db.Find(&contact, id)
 	if contact.ID > 0 {
-		// Sí existe, se borra y se envia contenido vacio
+		// Sí existe, se borra y se envia el contacto eliminado
 		db.Delete(contact)
-		utils.SendResponse(w, http.StatusOK, []byte(`{}`))
+		j, _ := json.Marshal(contact)
+		utils.SendResponse(w, http.StatusOK, j)
 	} else {
 		// Sí no existe el registro especificado se devuelde un error 404
 		utils.SendErr(w, http.StatusNotFound)
